@@ -28,7 +28,7 @@ public:
   void genClosestPrimes(mpz_class n) {
     mpz_class N;
     N = n;
-    for(mpz_class i = primes.back() + 1; primes.back() < N; i+=2) {
+    for(mpz_class i = primes.back() + 1; i < N; i+=2) {
       bool isdivisible = false;
       for(unsigned long long j = 0;j < primes.size();j++ ) {
         if (primes[j] * primes[j] > i) break;
